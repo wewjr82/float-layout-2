@@ -1,0 +1,74 @@
+/* Box Model Hack */
+* {
+  box-sizing: inherit; /*as you nest boxes inside each other they'll inherit height n width from parent*/
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 62.5%;
+  line-height: 1.5;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header,
+footer {
+  border: 2px solid black;
+  height: 100px;
+}
+
+main {
+  height: 100%;
+}
+
+
+
+/******************************************
+/* INNER STYLES
+/*******************************************/
+#main_top {
+  height: 50%;
+  border: 2px solid black;
+}
+
+#main_right {
+  width: 40%;
+  border: 2px solid black;
+  height: 50%;
+  float: left;
+}
+
+#main_left {
+  border: 2px solid black;
+  height: 50%;
+}
